@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import pathlib
 import struct
 import sys
@@ -70,4 +71,8 @@ def main(filename):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    parser = argparse.ArgumentParser()
+    parser.add_argument('filename', metavar='FILE')
+    args = parser.parse_args()
+
+    main(args.filename)
