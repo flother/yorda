@@ -66,7 +66,7 @@ def main(filename):
             extension = 'bmp'
         print(f'{extension}: {meta.width}x{meta.height}')
         with path.with_suffix(f'.{i}.{extension}').open('wb') as fh:
-             fh.write(image)
+            fh.write(image)
 
 
 if __name__ == '__main__':
