@@ -43,7 +43,7 @@ class CursorMeta:
     offset = attrib()
 
 
-def main(filename):
+def save_images(filename):
     path = pathlib.Path(filename)
     buffer = path.open('rb')
     h = FileHeader(*header_struct.unpack(buffer.read(header_struct.size)))
@@ -70,9 +70,9 @@ def main(filename):
             fh.write(image)
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('filename', metavar='FILE')
     args = parser.parse_args()
 
-    main(args.filename)
+    save_images(args.filename)
