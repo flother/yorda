@@ -15,7 +15,7 @@ setup(
     install_requires=('attrs',),
     entry_points={
         'console_scripts': [
-            'yorda=yorda:main',
+            'yorda=yorda.cli:main',
         ],
     },
 )
