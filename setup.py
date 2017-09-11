@@ -11,6 +11,7 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     include_package_data=True,
+    zip_safe=True,
     install_requires=('attrs',),
     entry_points={
         'console_scripts': [
